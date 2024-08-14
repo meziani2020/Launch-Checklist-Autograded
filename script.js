@@ -5,8 +5,7 @@
 
 window.addEventListener("load", function() {
 
-    //alert("loaded");
-    
+
      let form = document.querySelector("Form");
     
          form.addEventListener("submit",function(event){
@@ -21,10 +20,8 @@ window.addEventListener("load", function() {
        // let formStatus=formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
         if( formStatus != "ready2submit"){
             event.preventDefault();
-            //event.defaultPrevented();
-            //alert("Note submited");
         }else{
-            //alert("submited");
+            //confirm submition hhere 
         }
         
     
