@@ -50,18 +50,25 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let maxCharge=1000;
     let invalidData=false;
     //all fields are required
-/*    
+   
          if (validateInput(pilot) == "Empty" || validateInput(copilot) == "" || validateInput(fuelLevel) == ""   || validateInput(cargoLevel) == "" ) {
            say("All fields are required!");
-            status="notready2submit";
-        }
-*/
+           status="notready2submit";
+           list.style.visibility="hidden" ;
+           h2.innerHTML="Awaiting Information Before Launch";h2.style.color="";
 
+        }
+
+/*
         if (pilot === "Empty" || copilot === "" || fuelLevel === ""   || cargoLevel === "" ) {
           say("All fields are required!");
            status="notready2submit";
+           list.style.visibility="hidden" ;
+           h2.innerHTML="Awaiting Information Before Launch";h2.style.color="";
        }
-
+*/
+       else
+       {
         //console.log(`${document}, list, ${pilot}, ${copilot}, ${fuelLevel}, ${cargoLevel} `);
   
         console.log(`--------------------------->>   0==""  is  ${ 0==""}`);
@@ -124,18 +131,18 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                 status="notready2submit";
                 if(cargoLevel!=""){invalidData=true}
           };
+        
+          //Updating Shuttle
 
-    //Updating Shuttle
+          if( invalidData===true){
+             say("Make sure to enter valid information for each field!");
+           }
 
-    if( invalidData===true){
-       say("Make sure to enter valid information for each field!");
-        }
-
-    if(status==="notready2submit"){
+           if(status==="notready2submit"){
            h2.innerHTML='Shuttle Not Ready for Launch';
            h2.style.color="red";
-           list.style.visibility="visible" ;    }  
-           
+                 list.style.visibility="visible" ;    }  
+      }      
   //return "ready2submit";
   //console.log(`formSubmission(document, listE, ${pilotStatus.innerHTML}, ${copilotStatus.innerHTML}, ${fuelStatus.innerHTML}, ${cargoStatus.innerHTML})`);
   return "notready2submit";
