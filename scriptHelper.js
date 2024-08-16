@@ -23,7 +23,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
       
       let response="";
       //let val=testInput.value;
-      if(testInput===""){//
+      if(testInput===""   ){// 0 return umpty
         response="Empty";
       }else if(isNaN(testInput)){//
         response="Not a Number";
@@ -50,12 +50,22 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let maxCharge=1000;
     let invalidData=false;
     //all fields are required
-         if (pilot == "" || copilot == "" || fuelLevel == ""   || cargoLevel == "" ) {
+/*    
+         if (validateInput(pilot) == "Empty" || validateInput(copilot) == "" || validateInput(fuelLevel) == ""   || validateInput(cargoLevel) == "" ) {
            say("All fields are required!");
             status="notready2submit";
         }
-        console.log(`${document}, list, ${pilot}, ${copilot}, ${fuelLevel}, ${cargoLevel} `);
+*/
 
+        if (pilot === "Empty" || copilot === "" || fuelLevel === ""   || cargoLevel === "" ) {
+          say("All fields are required!");
+           status="notready2submit";
+       }
+
+        //console.log(`${document}, list, ${pilot}, ${copilot}, ${fuelLevel}, ${cargoLevel} `);
+  
+        console.log(`--------------------------->>   0==""  is  ${ 0==""}`);
+ 
         //assum initialy all good
         status="ready2submit";
         invalidData=false;
@@ -153,8 +163,9 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  }
 
  function say(msg){
-    //alert(msg);
-    console.log(msg);
+    // global.window.alert(msg);
+     alert(msg);
+     console.log(msg);
  }
  
  module.exports.addDestinationInfo = addDestinationInfo;
