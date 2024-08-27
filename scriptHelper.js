@@ -50,7 +50,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let maxCharge=1000;
     let invalidData=false;
     //all fields are required
-   /*
+   
          if (validateInput(pilot) == "Empty" || validateInput(copilot) == "" || validateInput(fuelLevel) == ""   || validateInput(cargoLevel) == "" ) {
            say("All fields are required!");
            status="notready2submit";
@@ -58,15 +58,15 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
            h2.innerHTML="Awaiting Information Before Launch";h2.style.color="";
 
         }
-*/
 
+/*
         if (pilot === "Empty" || copilot === "" || fuelLevel == ""   || cargoLevel === "" ) {
           say("All fields are required!");
            status="notready2submit";
            list.style.visibility="hidden" ;
            h2.innerHTML="Awaiting Information Before Launch";h2.style.color="";
        }
-
+*/
        else
        {
         //console.log(`${document}, list, ${pilot}, ${copilot}, ${fuelLevel}, ${cargoLevel} `);
