@@ -51,7 +51,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let invalidData=false;
     //all fields are required
    
-         if (validateInput(pilot) == "Empty" || validateInput(copilot) == "" || validateInput(fuelLevel) == ""   || validateInput(cargoLevel) == "" ) {
+         if (validateInput(pilot) == "Empty" || validateInput(copilot)== "Empty" || validateInput(fuelLevel)== "Empty"  || validateInput(cargoLevel) == "Empty" ) {
            say("All fields are required!");
            status="notready2submit";
            list.style.visibility="hidden" ;
