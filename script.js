@@ -21,6 +21,7 @@ window.addEventListener("load", function() {
         if( formStatus != "ready2submit"){
             event.preventDefault();
         }else{
+            event.preventDefault();
             //confirm submition hhere 
         }
         
